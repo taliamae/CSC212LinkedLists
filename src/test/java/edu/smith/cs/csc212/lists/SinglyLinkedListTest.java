@@ -231,6 +231,7 @@ public class SinglyLinkedListTest {
 		Assert.assertEquals(4, data.size());
 		Assert.assertEquals("d", data.removeBack());
 		testNoLoops(data);
+		System.out.println(data);
 		Assert.assertEquals(3, data.size());
 		Assert.assertEquals("c", data.removeBack());
 		testNoLoops(data);
@@ -253,6 +254,7 @@ public class SinglyLinkedListTest {
 		Assert.assertEquals(3, data.size());
 		Assert.assertEquals("d", data.removeIndex(2));
 		testNoLoops(data);
+		System.out.println("testRemoveIndex" + data);
 		Assert.assertEquals(2, data.size());
 		Assert.assertEquals("b", data.removeIndex(1));
 		testNoLoops(data);
@@ -388,6 +390,7 @@ public class SinglyLinkedListTest {
 	public void testSetIndexEasy() {
 		ListADT<String> data = makeABCDList();
 		data.setIndex(0, "z");
+		System.out.println("testSetIndexEasy" + data);
 		assertEquals("z", data.getIndex(0));
 		assertEquals("b", data.getIndex(1));
 		assertEquals("c", data.getIndex(2));
